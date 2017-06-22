@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+    <div class = "cards">
+        {{#users}}
+            <div class='card'>
+                <div class='image'>
+                    <img src={{avatar}}>
+                </div>    
+                <a href="/{{id}}"><h4>{{name}}</h4></a>
+                {{#job}}
+                    <div class="job"><h6>{{job}}, {{company}}</h6></div>
+                    {{/job}}
+                    {{^job}}
+                    <font color='darkred'><h6>Available for Hire</h6></font>
+                {{/job}}
+                    <div>{{  }}</div>
+            </div>
+        {{/users}}
+        </div>
+
+    
+    
+    </div>
+    </body>
+</html>
